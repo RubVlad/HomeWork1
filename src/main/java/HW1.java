@@ -18,8 +18,12 @@ public class HW1 {
     public static void calc() {
         int a, b, c = 0;
         float answ = 0;
+
+        System.out.println("Vvedite a");
         a = in.nextInt();
+        System.out.println("Vvedite b");
         b = in.nextInt();
+        System.out.println("Vvedite c");
         c = in.nextInt();
 
         if (a % 2 == 0)

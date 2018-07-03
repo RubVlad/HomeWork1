@@ -3,6 +3,7 @@ public class HW1 {
             calc();
             factorial();
             reverse();
+            bubble();
         }
 
 
@@ -76,5 +77,27 @@ public class HW1 {
         System.out.println(answ);
 
     }
+
+
+    public static void bubble() {
+        int tmp = 0;
+        int[] mas = {5, 3, 2, 4};
+
+        for (int i = mas.length-1; i > 0; i--) {
+            for (int j = 0; j < i; j++) {
+
+                if (mas[j] > mas[j + 1]) {
+                    tmp = mas[j];
+                    mas[j] = mas[j + 1];
+                    mas[j + 1] = tmp;
+                }
+
+            }
+        }
+        for (int i = 0; i < mas.length; i++)
+            System.out.println(mas[i]);
+    }
+
+
 }
 

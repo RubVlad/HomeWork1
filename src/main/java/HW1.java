@@ -8,16 +8,8 @@ public class HW1 {
 
 
     public static void main(String[] args) {
-        calc();
-        //factorial();
-       // reverse();
-       // bubble();
-    }
-
-
-    public static void calc() {
         int a, b, c = 0;
-        float answ = 0;
+        int[] mas = {5, 3, 2, 4};
 
         System.out.println("Vvedite a");
         a = in.nextInt();
@@ -25,6 +17,23 @@ public class HW1 {
         b = in.nextInt();
         System.out.println("Vvedite c");
         c = in.nextInt();
+
+        calc(a,b,c);
+        factorial(a);
+        reverse();
+        replaceMas(mas);
+        bubble(mas);
+
+    }
+
+
+
+    //Calculate
+    public static void calc(int a, int b, int c) {
+
+        float answ = 0;
+
+
 
         if (a % 2 == 0)
             answ = a * b / c;
@@ -40,8 +49,9 @@ public class HW1 {
     }
 
 
-    public static void factorial() {
-        int n = 3;
+
+    //Factorial
+    public static void factorial(int n) {
         int fact = 1;
         for (int i = 1; i < n; i++)
             fact = fact * i;
@@ -50,6 +60,8 @@ public class HW1 {
     }
 
 
+
+    //Reverse num
     public static void reverse() {
         int x = 554636;
 
@@ -85,10 +97,28 @@ public class HW1 {
 
     }
 
+    //Change in mas
+    private static void replaceMas(int mas[])
+    {
 
-    public static void bubble() {
+        int half = mas.length / 2;
+        int div = half + mas.length % 2;
+        for (int i = 0; i < div; i++)
+        {
+            int currentElement = mas[i];
+            mas[i] = mas[div + i];
+            mas[div + i] = currentElement;
+        }
+        
+        for (int i = 0; i < mas.length; i++)
+            System.out.println(mas[i]);
+    }
+
+
+
+    //bubble Sort
+    public static void bubble(int mas[]) {
         int tmp = 0;
-        int[] mas = {5, 3, 2, 4};
 
         for (int i = mas.length - 1; i > 0; i--) {
             for (int j = 0; j < i; j++) {
@@ -105,5 +135,30 @@ public class HW1 {
             System.out.println(mas[i]);
     }
 
-}
 
+
+
+    //Coordinates
+    private static void coord(int x, int y, int z){
+
+        if(x!=0&&y!=0&&z!=0) {
+            if (x > 0 && y > 0 && z > 0)
+                System.out.println("1");
+            if (x > 0 && y > 0 && z < 0)
+                System.out.println("2");
+            if (x < 0 && y > 0 && z < 0)
+                System.out.println("3");
+            if (x < 0 && y > 0 && z > 0)
+                System.out.println("4");
+            if (x > 0 && y < 0 && z > 0)
+                System.out.println("5");
+            if (x > 0 && y < 0 && z < 0)
+                System.out.println("6");
+            if (x < 0 && y < 0 && z < 0)
+                System.out.println("7");
+            if (x < 0 && y < 0 && z > 0)
+                System.out.println("8");
+        } else
+            System.out.println("no");
+    }
+}

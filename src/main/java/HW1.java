@@ -162,3 +162,21 @@ public class HW1 {
             System.out.println("no");
     }
 }
+
+
+//Stroki
+public static String cislo_v_stroku1(int n) {
+        return Integer.toString(n);
+    }
+
+    public static String cislo_v_stroku2(double n) {
+        return Double.toString(n);
+    }
+
+    public static int stroka_v_cislo1(String str) {
+        return Integer.parseInt(str);
+    }
+
+    public static double stroka_v_cislo2(String str) {
+        return Double.parseDouble(str);
+    }
